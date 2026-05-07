@@ -1,76 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>PustiGen | Natural Healthy Food</title>
-
-  <meta name="description" content="Natural healthy foods with oats, nuts, seeds and dry fruits.">
-
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="PustiGen premium natural healthy food. Explore featured products, best sellers, and wellness nutrition." />
+  <meta name="keywords" content="PustiGen, healthy food, natural food, nutrition, organic" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.png" alt="PustiGen logo" /><span>PustiGen</span></a>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#featured">Shop</a>
+    </nav>
+  </header>
 
-<header class="header">
-  <div class="logo-wrap">
-    <img src="logo.png" class="logo" alt="PustiGen">
-    <div>
-      <h2>PustiGen</h2>
-      <p>Wellness Technology</p>
-    </div>
-  </div>
+  <main>
+    <section class="hero-slider" id="hero-slider" aria-label="Hero banners"></section>
 
-  <a href="https://wa.me/8801351004652" class="whatsapp-btn">WhatsApp</a>
-</header>
+    <section class="section" id="featured">
+      <div class="section-head"><h2>Featured Products</h2><a class="link" href="product.html">Browse all</a></div>
+      <div class="grid products" id="featured-products"></div>
+    </section>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
+    <section class="section">
+      <div class="section-head"><h2>Categories</h2></div>
+      <div class="grid categories" id="categories"></div>
+    </section>
 
-  <div class="hero-content">
-    <h1>Healthy Food For A Better Lifestyle</h1>
+    <section class="section">
+      <div class="section-head"><h2>Best Sellers</h2></div>
+      <div class="grid products" id="best-sellers"></div>
+    </section>
 
-    <p>
-      High protein natural food made with oats, nuts, seeds & dry fruits.
-    </p>
+    <section class="section">
+      <div class="section-head"><h2>Customer Reviews</h2></div>
+      <div class="grid reviews" id="reviews"></div>
+    </section>
 
-    <a href="#products" class="shop-btn">Explore Products</a>
-  </div>
-</section>
+    <section class="section about-snippet">
+      <h2>Why PustiGen?</h2>
+      <p>PustiGen crafts nutrient-rich natural foods designed for daily wellness. Our ingredients are carefully sourced, minimally processed, and delivered with quality assurance.</p>
+      <a class="btn" href="about.html">Learn More</a>
+    </section>
+  </main>
 
-<section class="section-title">
-  <h2>Featured Products</h2>
-</section>
+  <a class="floating-whatsapp" target="_blank" rel="noopener" href="https://wa.me/8801351004652?text=Hello%20PustiGen%2C%20I%20want%20to%20know%20more%20about%20your%20products.">WhatsApp</a>
 
-<section id="products" class="products-grid"></section>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> PustiGen. All rights reserved.</p>
+  </footer>
 
-<section class="about">
-  <h2>About PustiGen</h2>
-
-  <p>
-    PustiGen একটি ন্যাচারাল ও স্বাস্থ্যকেন্দ্রিক ফুড ব্র্যান্ড,
-    যেখানে আমরা প্রাকৃতিক উপাদান ব্যবহার করে পুষ্টিকর ও হাই প্রোটিন খাদ্য তৈরি করি।
-  </p>
-</section>
-
-<footer>
-  <div class="footer-socials">
-    <a href="https://facebook.com/pustigen" target="_blank">Facebook</a>
-    <a href="https://instagram.com/pustigen" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@pustigen" target="_blank">TikTok</a>
-  </div>
-
-  <p>📞 01351004652</p>
-  <p>📧 pustigen@gmail.com</p>
-</footer>
-
-<script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

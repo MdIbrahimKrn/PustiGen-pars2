@@ -1,16 +1,35 @@
 [
   {
     "id": 1,
-    "name": "High Protein Oats",
-    "price": 590,
-    "image": "images/product1.jpg",
-    "description": "Healthy high protein oats mix with nuts, seeds and dry fruits."
+    "name": "PustiGen Natural Honey",
+    "category": "Natural Sweeteners",
+    "price": 890,
+    "bestSeller": true,
+    "shortDescription": "Pure honey for daily immunity and energy.",
+    "description": "Raw and natural honey collected with quality checks for purity, taste, and nutrition.",
+    "benefits": ["Supports immunity", "Natural energy source", "Rich in antioxidants"],
+    "images": ["images/product1.jpg", "images/product2.jpg", "images/banner.jpg"]
   },
   {
     "id": 2,
-    "name": "Dry Fruits Mix",
-    "price": 790,
-    "image": "images/product2.jpg",
-    "description": "Premium quality dry fruits for healthy lifestyle."
+    "name": "PustiGen Nutri Mix",
+    "category": "Nutrition Blend",
+    "price": 650,
+    "bestSeller": true,
+    "shortDescription": "Balanced nuts and seeds blend.",
+    "description": "A premium blend of nutrient-dense ingredients to support active and healthy lifestyles.",
+    "benefits": ["High in healthy fats", "Plant protein support", "Rich micronutrients"],
+    "images": ["images/product2.jpg", "images/product1.jpg", "images/banner.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "PustiGen Herbal Boost",
+    "category": "Wellness",
+    "price": 540,
+    "bestSeller": false,
+    "shortDescription": "Traditional herbs with modern nutrition approach.",
+    "description": "Carefully blended herbal formula for everyday wellness and vitality.",
+    "benefits": ["Digestive support", "Daily wellness", "Natural plant nutrients"],
+    "images": ["images/banner.jpg", "images/product1.jpg", "images/product2.jpg"]
   }
 ]
