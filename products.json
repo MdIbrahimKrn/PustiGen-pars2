@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "High Protein Oats",
+    "price": 590,
+    "image": "images/product1.jpg",
+    "description": "Healthy high protein oats mix with nuts, seeds and dry fruits."
+  },
+  {
+    "id": 2,
+    "name": "Dry Fruits Mix",
+    "price": 790,
+    "image": "images/product2.jpg",
+    "description": "Premium quality dry fruits for healthy lifestyle."
+  }
+]
