@@ -1,103 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>PustiGen Product</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | PustiGen</title>
+  <meta name="description" content="View PustiGen product details, nutrition benefits, and order via WhatsApp or instant form." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.png" alt="PustiGen logo" /><span>PustiGen</span></a>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="product-page">
+  <main class="section">
+    <div class="product-layout">
+      <div>
+        <img class="product-main-image" id="product-main-image" alt="Product image" />
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="product-details">
+        <h1 id="product-title"></h1>
+        <p class="price" id="product-price"></p>
+        <p id="product-description"></p>
 
-  <div class="product-image-wrap">
-    <img id="product-image" src="" alt="Product">
-  </div>
+        <h3>Nutritional Benefits</h3>
+        <ul id="benefits"></ul>
 
-  <div class="product-info">
+        <label for="qty">Quantity</label>
+        <div class="qty-row">
+          <button class="btn ghost" id="minus">-</button>
+          <input id="qty" type="number" min="1" value="1" />
+          <button class="btn ghost" id="plus">+</button>
+        </div>
 
-    <h1 id="product-name"></h1>
-
-    <div class="price" id="product-price"></div>
-
-    <p id="product-description"></p>
-
-    <div class="qty-box">
-      <button onclick="changeQty(-1)">-</button>
-      <span id="qty">1</span>
-      <button onclick="changeQty(1)">+</button>
+        <div class="cta-row">
+          <button class="btn" id="add-cart">Add to Cart</button>
+          <button class="btn alt" id="buy-now">Buy Now</button>
+        </div>
+        <div class="cta-row">
+          <a class="btn whatsapp" id="whatsapp-order" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn call" href="tel:+8801351004652">Call Now</a>
+        </div>
+        <p class="small">* Buy Now sends order to Google Sheet + opens WhatsApp confirmation.</p>
+      </div>
     </div>
+  </main>
 
-    <div class="action-buttons">
-
-      <a id="wa-order" target="_blank" class="primary-btn">Order on WhatsApp</a>
-
-      <a href="tel:01351004652" class="secondary-btn">Call Now</a>
-
-    </div>
-
-    <div class="order-form">
-      <h3>Quick Order</h3>
-
-      <form action="https://formsubmit.co/pustigen@gmail.com" method="POST">
-
-        <input type="hidden" name="Product" id="hidden-product">
-
-        <input type="text" name="Name" placeholder="Your Name" required>
-
-        <input type="text" name="Phone" placeholder="Phone Number" required>
-
-        <textarea name="Address" placeholder="Delivery Address"></textarea>
-
-        <button type="submit" class="primary-btn full-btn">Submit Order</button>
-      </form>
-    </div>
-
-  </div>
-
-</div>
-
-<script>
-let qty = 1;
-
-function changeQty(num){
-  qty += num;
-
-  if(qty < 1) qty = 1;
-
-  document.getElementById('qty').innerText = qty;
-}
-
-const params = new URLSearchParams(window.location.search);
-const productId = params.get('id');
-
-fetch('products.json')
-.then(res => res.json())
-.then(products => {
-
-  const product = products.find(p => p.id == productId);
-
-  if(!product) return;
-
-  document.getElementById('product-image').src = product.image;
-  document.getElementById('product-name').innerText = product.name;
-  document.getElementById('product-price').innerText = '৳' + product.price;
-  document.getElementById('product-description').innerText = product.description;
-
-  document.getElementById('hidden-product').value = product.name;
-
-  const waMessage = encodeURIComponent(
-    `Hello PustiGen,%0A%0AProduct: ${product.name}%0AQuantity: ${qty}`
-  );
-
-  document.getElementById('wa-order').href =
-    `https://wa.me/8801351004652?text=${waMessage}`;
-});
-</script>
-
+  <footer class="site-footer">
+    <p>© <span id="year"></span> PustiGen. All rights reserved.</p>
+  </footer>
+  <script src="app.js" defer></script>
 </body>
 </html>
